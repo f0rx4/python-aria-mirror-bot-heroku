@@ -3,4 +3,4 @@ class StatusMessage:
         self.update = update
         self.context = context
         self.message = update.message
-        self.uid = self.message.message_id
+        self.uid = self.update.effective_chat.id

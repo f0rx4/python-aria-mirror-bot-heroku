@@ -25,12 +25,12 @@ except KeyError:
     pass
 
 aria2 = aria2p.API(
-            aria2p.Client(
-                host="http://localhost",
-                port=6800,
-                secret="",
-            )
-        )
+    aria2p.Client(
+        host="http://localhost",
+        port=6800,
+        secret="",
+    )
+)
 
 DOWNLOAD_DIR = None
 BOT_TOKEN = None
@@ -44,7 +44,7 @@ AUTHORIZED_CHATS = []
 with open('authorized_chats.txt', 'r+') as f:
     lines = f.readlines()
     for line in lines:
-        LOGGER.info(line.split())
+        #        LOGGER.info(line.split())
         AUTHORIZED_CHATS.append(int(line.split()[0]))
 try:
     BOT_TOKEN = getConfig('BOT_TOKEN')

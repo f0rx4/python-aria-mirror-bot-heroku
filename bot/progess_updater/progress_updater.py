@@ -54,7 +54,7 @@ class ProgressUpdater:
         for key, download in self.downloads.items():
             if download.status() == bot_utils.MirrorStatus.STATUS_CANCELLED:
                 del self.downloads[key]
-            elif download.status == bot_utils.MirrorStatus.STATUS_CANCELLED:
+            elif download.status == bot_utils.MirrorStatus.STATUS_FAILED:
                 del self.downloads[key]
 
     def _check_mirror_finished(self):
@@ -78,5 +78,6 @@ class ProgressUpdater:
             with self.downloads_lock:
                 msg = bot_utils.get_readable_message(list(self.downloads.values()))
             self._clear_mirrors()
+            self._check_mirror_finished()
             self._edit_all_message(msg)
             time.sleep(DOWNLOAD_STATUS_UPDATE_INTERVAL)

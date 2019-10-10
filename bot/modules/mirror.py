@@ -9,7 +9,7 @@ from bot.helper.ext_utils.bot_utils import get_readable_message, MirrorStatus
 from bot.helper.ext_utils.exceptions import KillThreadException
 from bot.helper.telegram_helper.filters import CustomFilters
 import pathlib
-
+import threading
 class MirrorListener(listeners.MirrorListeners):
     def __init__(self, context, update, reply_message, isTar=False):
         super().__init__(context, update, reply_message)
@@ -107,7 +107,9 @@ def _mirror(update, context, isTar=False):
         status_reply_dict[index] = reply_msg
     listener = MirrorListener(context, update, reply_msg, isTar)
     aria = download_tools.DownloadHelper(listener)
-    aria.add_download(link)
+    t1 = threading.Thread(target=aria.add_download, args=(link,))
+    t1.start()
+    LOGGER.info('yoyo')
 
 
 @run_async

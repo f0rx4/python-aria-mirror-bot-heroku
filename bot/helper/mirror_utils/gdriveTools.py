@@ -27,6 +27,8 @@ class GoogleDriveHelper:
         self.__service = self.authorize()
         self.uploadedBytes = 0
         self.start_time = 0
+        self.link = None
+        self.error = None
 
     def upload_file(self, file_path, file_name, mime_type, parent_id):
         # File body description
@@ -102,7 +104,7 @@ class GoogleDriveHelper:
                 LOGGER.error(str(e))
                 e_str = str(e).replace('<', '')
                 e_str = e_str.replace('>', '')
-                self.__listener.onUploadError(e_str, _list, index)
+                self.error = e_str
                 return
         else:
             try:
