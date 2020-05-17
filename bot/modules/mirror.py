@@ -69,6 +69,12 @@ class MirrorListener(listeners.MirrorListeners):
                 LOGGER.info(
                     f'got path : {path}'
                 )
+                try:
+                    os.remove(m_path)
+                except Exception as e:
+                    LOGGER.error(str(e))
+                pass
+                LOGGER.info(f"Deleting archive : {m_path}")
             else:
                 LOGGER.info("Not any valid archive, uploading file as it is.")
                 path = f'{DOWNLOAD_DIR}{self.uid}/{download_dict[self.uid].name()}'
