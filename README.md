@@ -51,7 +51,7 @@ OR use online terminal
 
 ``` pkg install python wget ```
 
-``` wget https://raw.githubusercontent.com/CW4RR10R/python-aria-mirror-bot/master/generate_drive_token.py ```
+``` wget https://raw.githubusercontent.com/life561/herokumirror/blob/master/generate_drive_token.py ```
 
 ``` pip install oauth2client ```
 
