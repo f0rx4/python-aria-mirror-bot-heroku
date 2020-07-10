@@ -2,6 +2,7 @@ import asyncio
 
 from userge import userge
 
+#by @decomposed inspired by brain.py and pepe snake.py
 
 @userge.on_cmd("snake$", about={'header': "call the most powerful race in the universe"})
 async def snake_func(message):
@@ -61,6 +62,6 @@ async def snake_func(message):
             "◻️◻️◻️◻️◻️\n◻️◼️◻️◼️◻️\n◻️◻️◻️◻️◻️\n◻️◼️◼️◼️◻️\n◻️◻️◻️◻️◻️",
         
     ]
-    for i in range(52):
+    for i in range(53):
         await asyncio.sleep(0.6)
-        await message.edit(animation_chars[i % 52])
+        await message.edit(animation_chars[i % 53])
