@@ -62,6 +62,7 @@ async def snake_func(message):
             "◻️◻️◻️◻️◻️\n◻️◼️◻️◼️◻️\n◻️◻️◻️◻️◻️\n◻️◼️◼️◼️◻️\n◻️◻️◻️◻️◻️",
         
     ]
-    for i in range(53):
+    for i in range(27)
+    :
         await asyncio.sleep(0.6)
-        await message.edit(animation_chars[i % 53])
+        await message.edit(animation_chars[i % 27])
