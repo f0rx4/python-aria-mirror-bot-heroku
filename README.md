@@ -22,7 +22,7 @@ Hit the deploy to heroku button and follow the further instructions in the scree
 
 **NB: Usage of Aria2 may leads to the suspension of your heroku account so deploy at your own risk.**
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/life561/herokumirror/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Guru2509/python-aria-mirror-bot-heroku/tree/master)
 
 
  
@@ -43,15 +43,12 @@ pip install oauth2client
 ```
 python3 generate_drive_token.py
 ```
-OR use online terminal
-
-[![Run](https://img.shields.io/badge/Run%20Online-Red)](https://gdrive-auth.cw4rr10r.repl.run)
 
 **Termux:**
 
 ``` pkg install python wget ```
 
-``` wget https://raw.githubusercontent.com/life561/herokumirror/blob/master/generate_drive_token.py ```
+``` wget https://raw.githubusercontent.com/Guru2509/python-aria-mirror-bot-heroku/blob/master/generate_drive_token.py ```
 
 ``` pip install oauth2client ```
 
@@ -79,15 +76,12 @@ pip install pyrogram tgcrypto
 ```
 python3 generate_string_session.py
 ```
-OR use online terminal
-
-[![Run](https://img.shields.io/badge/Run%20Online-Red)](https://gen-session.cw4rr10r.repl.run)
 
 **Termux:**
 
 ``` pkg install python wget ``` (if not installed earlier)
 
-``` wget https://raw.githubusercontent.com/CW4RR10R/python-aria-mirror-bot/master/generate_string_session.py ```
+``` wget https://raw.githubusercontent.com/Guru2509/python-aria-mirror-bot-heroku/master/generate_string_session.py ```
 
 ``` pip install pyrogram tgcrypto ```
 
